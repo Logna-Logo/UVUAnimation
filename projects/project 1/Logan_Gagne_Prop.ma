@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Logan_Gagne_Prop.ma
-//Last modified: Wed, Aug 26, 2026 11:32:53 AM
+//Last modified: Wed, Aug 26, 2026 11:34:04 AM
 //Codeset: 1252
 requires maya "2027";
 requires "stereoCamera" "10.0";
@@ -14,13 +14,13 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "21DD9391-4581-0859-8640-AD9FE3190E68";
+fileInfo "UUID" "06A9D8D1-4299-1433-7DCF-3481907B349D";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "16E75D02-4D8A-300A-149A-BBB896BF59D5";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -5.0857190814880182 3.1160561695637994 -4.8707768217264373 ;
-	setAttr ".r" -type "double3" 162.72340408417094 -37.178143641734763 -180 ;
+	setAttr ".t" -type "double3" 4.9142027543927203 3.0505176238627674 0.8522883387331941 ;
+	setAttr ".r" -type "double3" 163.32340408416886 96.821856358265151 -180.00000000000006 ;
 	setAttr ".rp" -type "double3" 0 3.8857805861880479e-16 -3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" -5.0152799923917518e-15 5.5930419658827966e-14 4.0389340054939654e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
