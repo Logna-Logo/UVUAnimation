@@ -1,6 +1,6 @@
 //Maya ASCII 2027 scene
 //Name: Regular Living room.ma
-//Last modified: Mon, Nov 09, 2026 11:34:47 AM
+//Last modified: Mon, Nov 09, 2026 12:16:22 PM
 //Codeset: 1252
 requires maya "2027";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,22 +11,22 @@ fileInfo "product" "Maya 2027";
 fileInfo "version" "2027";
 fileInfo "cutIdentifier" "202604221258-70da84b25e";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "671E90B1-492A-874E-1B28-ABBF808904C7";
+fileInfo "UUID" "360D5025-4602-F16E-1A9F-CBB84742D282";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "68F36377-4886-2EF9-C5E0-81803A92EFBB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 27.970749099910485 47.283810905969631 60.544346932514614 ;
-	setAttr ".r" -type "double3" -34.538352729193562 -1773.7999999997385 1.772373927604088e-15 ;
+	setAttr ".t" -type "double3" 104.43386037983871 78.642723568052716 153.0638613321666 ;
+	setAttr ".r" -type "double3" -23.138352734169555 -3206.2000000004246 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "680105FE-43DA-CBA0-A295-5F92A27662EA";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 75.932697953233273;
+	setAttr ".coi" 201.89290446753679;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 1.0653138502625483 7.0260545025018235 ;
+	setAttr ".tp" -type "double3" 1.1562607624932397 -0.6916464578897229 -1.2103750918237655 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "E0D2D70D-42BC-CB1D-C6ED-CFA88C7ADEC3";
@@ -64,14 +64,14 @@ createNode camera -s -n "frontShape" -p "front";
 createNode transform -s -n "side";
 	rename -uid "105AEC83-4764-3959-4FED-9EBEF93110A2";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1000.1 0 0 ;
+	setAttr ".t" -type "double3" 1000.1 60.671230879381497 1.1217581545126929 ;
 	setAttr ".r" -type "double3" 0 90 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	rename -uid "25E799DD-4D42-22FE-9C72-D28830A396D8";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 1000.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 32.885380031607681;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -80,6 +80,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "pCube1";
 	rename -uid "0DBCC859-45E0-23A6-D469-1F99FF6D645A";
+	setAttr ".t" -type "double3" 0 -0.12990882805219917 0 ;
+	setAttr -av ".ty";
 	setAttr ".s" -type "double3" 54.905449592709509 -0.28233376110361114 39.307344277443384 ;
 	setAttr -av ".sz";
 	setAttr ".rp" -type "double3" 0 0.12990882805219911 0 ;
@@ -90,7 +92,7 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.75 0.125 ;
+	setAttr ".pv" -type "double2" 0.5 0.875 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -101,24 +103,6 @@ createNode mesh -n "pCubeShape1" -p "pCube1";
 		0.060436405 3.9792449 -0.022128358 -0.018318197 3.9792449 -0.039456822 0.060436405 
 		3.9792449 -0.039456822 -0.018318197 2.3314684e-15 -0.039456822 0.060436405 1.5543122e-15 
 		-0.039456822;
-createNode transform -n "pCube2";
-	rename -uid "8CF6374B-49EF-52A4-C489-7F9A7C67822E";
-	setAttr ".t" -type "double3" 0 0.49999999600459177 52.16365381956723 ;
-	setAttr -av ".tz";
-	setAttr ".s" -type "double3" 1 1 1 ;
-	setAttr -av ".sz";
-	setAttr ".rp" -type "double3" 0 -0.49999999600459177 0 ;
-	setAttr ".sp" -type "double3" 0 -0.49999999600459177 0 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
-	rename -uid "3FFB82C9-4BB3-748A-7095-FDBF4B2188C1";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode transform -n "pCube3";
 	rename -uid "3A7C4236-4551-D1D2-60F2-6F992C924B76";
 	setAttr ".s" -type "double3" 32.226671535727625 14.040570746136675 8.8563592482007518 ;
@@ -383,64 +367,6 @@ createNode mesh -n "pCubeShape7" -p "pCube7";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube8";
-	rename -uid "A6F24430-493C-06A6-74EA-6F93844C1861";
-	setAttr ".t" -type "double3" -26.410281731650162 0.49999999600459177 -2.4008848626582049 ;
-	setAttr -av ".tx";
-	setAttr -av ".tz";
-	setAttr ".r" -type "double3" 0 -89.999999999999972 0 ;
-	setAttr ".s" -type "double3" 7.5880414888059002 13.614686536814359 0.93137741948532726 ;
-	setAttr -av ".sx";
-	setAttr -av ".sz";
-	setAttr ".rp" -type "double3" 0 -0.49999999600459177 0 ;
-	setAttr ".sp" -type "double3" 0 -0.49999999600459177 0 ;
-createNode mesh -n "pCubeShape8" -p "pCube8";
-	rename -uid "7504E23E-4368-D681-8ACE-98A0D03E94CA";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube9";
 	rename -uid "2B22D278-4EDB-C36D-F636-0DB22C4D2E50";
 	setAttr ".t" -type "double3" 0 0.49999999600459177 -2.4400679973234731 ;
@@ -498,70 +424,26 @@ createNode mesh -n "pCubeShape9" -p "pCube9";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "pCube10";
 	rename -uid "C8CAF5EB-4ABC-76ED-5C39-28A903C552F5";
-	setAttr ".t" -type "double3" 0 0.49999999600459177 7.0260545025018235 ;
+	setAttr ".t" -type "double3" 0 -52.347110897260286 0 ;
 	setAttr -av ".tz";
-	setAttr ".s" -type "double3" 8.8385372869988661 2.1306277175505515 3.8795287201169133 ;
 	setAttr -av ".sz";
-	setAttr ".rp" -type "double3" 0 -0.49999999600459177 0 ;
-	setAttr ".sp" -type "double3" 0 -0.49999999600459177 0 ;
+	setAttr ".rp" -type "double3" 0 52.347110897260286 7.0260545025018235 ;
+	setAttr ".sp" -type "double3" 0 52.347110897260286 7.0260545025018235 ;
 createNode mesh -n "pCubeShape10" -p "pCube10";
 	rename -uid "0C1227A9-4D41-10D5-012B-5DAB56309261";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr -s 6 ".gtag";
-	setAttr ".gtag[0].gtagnm" -type "string" "back";
-	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
-	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
-	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
-	setAttr ".gtag[2].gtagnm" -type "string" "front";
-	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
-	setAttr ".gtag[3].gtagnm" -type "string" "left";
-	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
-	setAttr ".gtag[4].gtagnm" -type "string" "right";
-	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
-	setAttr ".gtag[5].gtagnm" -type "string" "top";
-	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.30996465682983398 0.47493204474449158 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pCube11";
-	rename -uid "30A092C8-4496-9DDB-09A0-C49E8A747ED7";
-	setAttr ".t" -type "double3" 0 0.49999999600459177 16.420196422197964 ;
-	setAttr -av ".tz";
-	setAttr ".s" -type "double3" 10.018370496827721 3.0850092619490144 4.6970222241834199 ;
-	setAttr -av ".sz";
-	setAttr ".rp" -type "double3" 0 -0.49999999600459177 0 ;
-	setAttr ".sp" -type "double3" 0 -0.49999999600459177 0 ;
-createNode mesh -n "pCubeShape11" -p "pCube11";
-	rename -uid "2E36C9AB-4994-E45C-037B-1491FF8F3D61";
+createNode mesh -n "polySurfaceShape2" -p "pCube10";
+	rename -uid "61DED28B-4891-139F-1248-65951A2BBDB3";
 	setAttr -k off ".v";
+	setAttr ".io" yes;
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
 	setAttr -s 6 ".gtag";
@@ -577,6 +459,7 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.5 0.875 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -585,6 +468,11 @@ createNode mesh -n "pCubeShape11" -p "pCube11";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[1]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[7]" -type "float3" 0 0.79633409 0 ;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
@@ -661,6 +549,877 @@ createNode mesh -n "pCubeShape12" -p "pCube12";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube13";
+	rename -uid "76EC2FB0-4609-5D3E-4511-C2847D0639F5";
+	setAttr ".t" -type "double3" 4.0087934452502898 0.50000000420747193 8.6166060631040615 ;
+	setAttr ".s" -type "double3" 0.23458505888736908 0.23458505888736908 0.23458505888736908 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape13" -p "pCube13";
+	rename -uid "663ED6D8-428B-91C7-48C5-80A62587E829";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.78664477729678539 0.78246332767480853 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube14";
+	rename -uid "063C0AC6-4E17-C49B-6B01-FA8AAFB810CD";
+	setAttr ".t" -type "double3" 4.0087934452502898 0.50000000420747193 5.4299322434035728 ;
+	setAttr ".s" -type "double3" 0.23458505888736908 0.23458505888736908 0.23458505888736908 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape14" -p "pCube14";
+	rename -uid "69E98416-4032-3540-33CA-0482E4561603";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  4.7683716e-07 0 1.4305115e-06 
+		-4.7683716e-07 0 1.4305115e-06 0 9.5367432e-07 9.5367432e-07 -4.7683716e-07 9.5367432e-07 
+		9.5367432e-07 0 9.5367432e-07 0 -4.7683716e-07 9.5367432e-07 0 4.7683716e-07 0 -4.7683716e-07 
+		-4.7683716e-07 0 -4.7683716e-07;
+createNode mesh -n "pCubeShape14Orig" -p "pCube14";
+	rename -uid "B93A740F-4164-8C87-B18B-29A455184142";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube15";
+	rename -uid "A9250B99-4080-5AD0-1F00-D1B22135099B";
+	setAttr ".t" -type "double3" -4.0299211057855384 0.50000000420747193 5.4299322434035728 ;
+	setAttr ".s" -type "double3" 0.23458505888736908 0.23458505888736908 0.23458505888736908 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape15" -p "pCube15";
+	rename -uid "B98CC5A2-4623-028A-55B9-1EB5B2A6C720";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  2.3841858e-07 0 1.4305115e-06 
+		-9.5367432e-07 0 1.4305115e-06 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 
+		9.5367432e-07 4.7683716e-07 9.5367432e-07 0 0 9.5367432e-07 0 2.3841858e-07 0 -4.7683716e-07 
+		-9.5367432e-07 0 -4.7683716e-07;
+createNode mesh -n "pCubeShape15Orig" -p "pCube15";
+	rename -uid "795925E9-4649-EF90-17AF-D19E7FE7B46A";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube16";
+	rename -uid "FC4A6D0E-4DE2-0342-BB81-19AA4D6DFB67";
+	setAttr ".t" -type "double3" -4.0299211057855384 0.50000000420747193 8.6166060631040615 ;
+	setAttr ".s" -type "double3" 0.23458505888736908 0.23458505888736908 0.23458505888736908 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape16" -p "pCube16";
+	rename -uid "B6DF9C77-485C-90EC-F61E-85B0052BEB29";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  2.3841858e-07 0 9.5367432e-07 
+		-9.5367432e-07 0 9.5367432e-07 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 
+		9.5367432e-07 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 9.5367432e-07 
+		2.3841858e-07 0 9.5367432e-07 -9.5367432e-07 0 9.5367432e-07;
+createNode mesh -n "pCubeShape16Orig" -p "pCube16";
+	rename -uid "611E2F32-48A5-EA27-8983-7EADCDBA9E43";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube17";
+	rename -uid "5529FE9C-49CC-43B7-21CC-D38BEEBF072F";
+	setAttr ".t" -type "double3" 0 -51.426093906404382 9.3921875789044424 ;
+	setAttr -av ".tz";
+	setAttr ".s" -type "double3" 1.1162077647579713 1 1.1785732359160348 ;
+	setAttr -av ".sz";
+	setAttr ".rp" -type "double3" 0 52.347110897260286 7.0260545025018235 ;
+	setAttr ".sp" -type "double3" 0 52.347110897260286 7.0260545025018235 ;
+createNode mesh -n "pCubeShape17" -p "pCube17";
+	rename -uid "C2E9A654-4319-4E65-4C55-C49EA71911F7";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 2 "f[3]" "f[6:13]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.30996465682983398 0.47493204474449158 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 30 ".uvst[0].uvsp[0:29]" -type "float2" 0.18878984 0.29476979
+		 0.039265096 0.29476979 0.039265096 0.27804479 0.18878978 0.27804479 0.039265096 0.63542455
+		 0.18878984 0.63542455 0.18878984 0.65214962 0.039265096 0.65214962 0.24015015 0.30317077
+		 0.37977916 0.30317074 0.37977916 0.31149483 0.24015015 0.31149483 0.37977916 0.64669335
+		 0.24015027 0.64669299 0.24015015 0.63836902 0.3797791 0.6383692 0.18878978 0.99280441
+		 0.039265096 0.99280429 0.044212997 0.30166003 0.044212997 0.62853432 0.18384194 0.30166003
+		 0.18384194 0.62853432 0.2055148 0.29476979 0.2055148 0.63542455 0.022540122 0.63542455
+		 0.022540122 0.29476979 0.23182613 0.63836914 0.23182613 0.31149486 0.38810319 0.31149486
+		 0.38810313 0.6383692;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".vt[0:15]"  -4.41926861 54.043800354 8.9658165 4.41926861 54.043800354 8.9658165
+		 -4.41926861 54.47774124 8.9658165 4.41926861 54.47774124 8.9658165 -4.41926861 54.47774124 5.086288929
+		 4.41926861 54.47774124 5.086288929 -4.41926861 54.043800354 5.086288929 4.41926861 54.043800354 5.086288929
+		 -4.24049616 54.043800354 5.21466637 4.24049616 54.043800354 5.21466637 4.24049616 54.043800354 8.83744049
+		 -4.24049616 54.043800354 8.83744049 -4.24049616 53.82782364 5.21466637 4.24049616 53.82782364 5.21466637
+		 4.24049616 53.82782364 8.83744049 -4.24049616 53.82782364 8.83744049;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 6 8 0 7 9 0 8 9 0 1 10 0 9 10 0 0 11 0 11 10 0 8 11 0
+		 8 12 0 9 13 0 12 13 0 10 14 0 13 14 0 11 15 0 15 14 0 12 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 5 0 22 23
+		f 4 1 7 -3 -7
+		mu 0 4 6 16 17 7
+		f 4 2 9 -4 -9
+		mu 0 4 24 25 1 4
+		f 4 22 24 -27 -28
+		mu 0 4 14 11 10 15
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7
+		f 4 3 13 -15 -13
+		mu 0 4 4 1 18 19
+		f 4 11 15 -17 -14
+		mu 0 4 1 0 20 18
+		f 4 -1 17 18 -16
+		mu 0 4 0 5 21 20
+		f 4 -11 12 19 -18
+		mu 0 4 5 4 19 21
+		f 4 14 21 -23 -21
+		mu 0 4 26 27 11 14
+		f 4 16 23 -25 -22
+		mu 0 4 8 9 10 11
+		f 4 -19 25 26 -24
+		mu 0 4 28 29 15 10
+		f 4 -20 20 27 -26
+		mu 0 4 12 13 14 15;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 10 
+		0 0 
+		1 0 
+		4 0 
+		5 0 
+		6 0 
+		7 0 
+		10 0 
+		11 0 
+		14 0 
+		15 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "polySurfaceShape2" -p "pCube17";
+	rename -uid "4C7FA082-4C64-E6F8-97E2-2EB07F11CF85";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".pv" -type "double2" 0.5 0.875 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 4 ".pt";
+	setAttr ".pt[0]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[1]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[6]" -type "float3" 0 0.79633409 0 ;
+	setAttr ".pt[7]" -type "float3" 0 0.79633409 0 ;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube18";
+	rename -uid "4AA52AB1-4913-4B32-4AA8-AC95158B0C5A";
+	setAttr ".t" -type "double3" -4.4121895176945802 0.50000000420747193 18.213505720784912 ;
+	setAttr ".s" -type "double3" 0.29946159582265536 0.38798167695439556 0.29946159582265536 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape18" -p "pCube18";
+	rename -uid "8A6E806F-4B38-F6C4-5A7D-69A15D86DD04";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.79772872 0.77137947
+		 0.77556086 0.77137947 0.77039206 0.60650599 0.80289751 0.60650599 0.77556086 0.79354727
+		 0.79772872 0.79354727 0.80289751 0.95842063 0.77039206 0.95842063 0.9626022 0.76621056
+		 0.9626022 0.79871607 0.61068738 0.79871607 0.61068749 0.76621044;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  2.3841858e-07 0 9.5367432e-07 
+		-9.5367432e-07 0 9.5367432e-07 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 
+		9.5367432e-07 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 9.5367432e-07 
+		2.3841858e-07 0 9.5367432e-07 -9.5367432e-07 0 9.5367432e-07;
+	setAttr -s 8 ".vt[0:7]"  -0.43152437 -0.5 0.43152556 0.43152365 -0.5 0.43152556
+		 -0.63276005 5.91892958 0.63276136 0.63276052 5.91892958 0.63276136 -0.63276005 5.91892958 -0.63275945
+		 0.63276052 5.91892958 -0.63275945 -0.43152437 -0.5 -0.43152365 0.43152365 -0.5 -0.43152365;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 5 0 8 9
+		f 4 2 9 -4 -9
+		mu 0 4 10 11 1 4
+		f 4 3 11 -1 -11
+		mu 0 4 4 1 0 5
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "pCubeShape16Orig18" -p "pCube18";
+	rename -uid "EA9CD0BE-409D-6C47-3D24-FA90F74205CC";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube19";
+	rename -uid "8A81FA1C-4E8B-A7EC-381D-B18C4332AD93";
+	setAttr ".t" -type "double3" -4.4121895176945802 0.50000000420747193 14.631945849777406 ;
+	setAttr ".s" -type "double3" 0.29946159582265536 0.38798167695439556 0.29946159582265536 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape19" -p "pCube19";
+	rename -uid "CC3F257E-4F89-F1F3-EFC4-4E88F755B71A";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.79772872 0.77137947
+		 0.77556086 0.77137947 0.77039206 0.60650599 0.80289751 0.60650599 0.77556086 0.79354727
+		 0.79772872 0.79354727 0.80289751 0.95842063 0.77039206 0.95842063 0.9626022 0.76621056
+		 0.9626022 0.79871607 0.61068738 0.79871607 0.61068749 0.76621044;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  2.3841858e-07 0 1.4305115e-06 
+		-9.5367432e-07 0 1.4305115e-06 4.7683716e-07 9.5367432e-07 9.5367432e-07 0 9.5367432e-07 
+		9.5367432e-07 4.7683716e-07 9.5367432e-07 0 0 9.5367432e-07 0 2.3841858e-07 0 -4.7683716e-07 
+		-9.5367432e-07 0 -4.7683716e-07;
+	setAttr -s 8 ".vt[0:7]"  -0.43152437 -0.5 0.43152604 0.43152365 -0.5 0.43152604
+		 -0.63276005 5.91892958 0.63276136 0.63276052 5.91892958 0.63276136 -0.63276005 5.91892958 -0.63276041
+		 0.63276052 5.91892958 -0.63276041 -0.43152437 -0.5 -0.43152508 0.43152365 -0.5 -0.43152508;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 5 0 8 9
+		f 4 2 9 -4 -9
+		mu 0 4 10 11 1 4
+		f 4 3 11 -1 -11
+		mu 0 4 4 1 0 5
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "pCubeShape15Orig19" -p "pCube19";
+	rename -uid "FFB43E2C-4EAC-1562-94ED-C5AD2C000C18";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube20";
+	rename -uid "31F70ED0-4F5A-E4FC-6131-2DA3733292D9";
+	setAttr ".t" -type "double3" 4.4308278637969591 0.50000000420747193 18.213505720784912 ;
+	setAttr ".s" -type "double3" 0.29946159582265536 0.38798167695439556 0.29946159582265536 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape20" -p "pCube20";
+	rename -uid "296C533A-4EB6-58F9-DB4D-ADA19D6CC24D";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".pv" -type "double2" 0.78664477729678539 0.78246332767480853 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.79772872 0.77137947
+		 0.77556086 0.77137947 0.77039206 0.60650599 0.80289751 0.60650599 0.77556086 0.79354727
+		 0.79772872 0.79354727 0.80289751 0.95842063 0.77039206 0.95842063 0.9626022 0.76621056
+		 0.9626022 0.79871607 0.61068738 0.79871607 0.61068749 0.76621044;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 5 0 8 9
+		f 4 2 9 -4 -9
+		mu 0 4 10 11 1 4
+		f 4 3 11 -1 -11
+		mu 0 4 4 1 0 5
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 4 
+		0 0 
+		1 0 
+		4 0 
+		5 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube21";
+	rename -uid "49462381-4A0C-67C1-B784-1D83F29F9E75";
+	setAttr ".t" -type "double3" 4.4308278637969591 0.50000000420747193 14.631945849777406 ;
+	setAttr ".s" -type "double3" 0.29946159582265536 0.38798167695439556 0.29946159582265536 ;
+	setAttr ".rp" -type "double3" 0 -0.50000000420747193 0 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000420747193 0 ;
+createNode mesh -n "pCubeShape21" -p "pCube21";
+	rename -uid "E18E3089-4A3F-334E-B195-148FA2C76308";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".pv" -type "double2" 0.5 0.125 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 12 ".uvst[0].uvsp[0:11]" -type "float2" 0.79772872 0.77137947
+		 0.77556086 0.77137947 0.77039206 0.60650599 0.80289751 0.60650599 0.77556086 0.79354727
+		 0.79772872 0.79354727 0.80289751 0.95842063 0.77039206 0.95842063 0.9626022 0.76621056
+		 0.9626022 0.79871607 0.61068738 0.79871607 0.61068749 0.76621044;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".pt[0:7]" -type "float3"  4.7683716e-07 0 1.4305115e-06 
+		-4.7683716e-07 0 1.4305115e-06 0 9.5367432e-07 9.5367432e-07 -4.7683716e-07 9.5367432e-07 
+		9.5367432e-07 0 9.5367432e-07 0 -4.7683716e-07 9.5367432e-07 0 4.7683716e-07 0 -4.7683716e-07 
+		-4.7683716e-07 0 -4.7683716e-07;
+	setAttr -s 8 ".vt[0:7]"  -0.43152413 -0.5 0.43152604 0.43152413 -0.5 0.43152604
+		 -0.63276052 5.91892958 0.63276136 0.63276005 5.91892958 0.63276136 -0.63276052 5.91892958 -0.63276041
+		 0.63276005 5.91892958 -0.63276041 -0.43152413 -0.5 -0.43152508 0.43152413 -0.5 -0.43152508;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 5 0 8 9
+		f 4 2 9 -4 -9
+		mu 0 4 10 11 1 4
+		f 4 3 11 -1 -11
+		mu 0 4 4 1 0 5
+		f 4 -12 -10 -8 -6
+		mu 0 4 0 1 2 3
+		f 4 10 4 6 8
+		mu 0 4 4 5 6 7;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode mesh -n "pCubeShape14Orig21" -p "pCube21";
+	rename -uid "A566DE4D-474B-1E80-2D68-60905EA46E8F";
+	setAttr -k off ".v";
+	setAttr ".io" yes;
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 0;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcol" yes;
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.4315246 -0.5 0.4315246 0.4315246 -0.5 0.4315246
+		 -0.63276052 5.91892862 0.63276041 0.63276052 5.91892862 0.63276041 -0.63276052 5.91892862 -0.63276041
+		 0.63276052 5.91892862 -0.63276041 -0.4315246 -0.5 -0.4315246 0.4315246 -0.5 -0.4315246;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 5 -ch 20 ".fc[0:4]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube22";
+	rename -uid "F08299A7-4E5D-0D72-14BA-D8B3FEC03920";
+	setAttr ".rp" -type "double3" 0 1.8084206692050562 17.041663191886364 ;
+	setAttr ".sp" -type "double3" 0 1.8084206692050562 17.041663191886364 ;
+createNode mesh -n "pCubeShape22" -p "pCube22";
+	rename -uid "74666BC6-4F2D-B256-06F7-E0822A58B8FA";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.74223727796616634 0.2769874674100764 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "pCube23";
+	rename -uid "4AB7A481-41C9-1115-E68C-74BA3B5CBF24";
+	setAttr ".t" -type "double3" -26.164216461890561 60.98021291048547 1.3558078810175191 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr -av ".tz";
+	setAttr ".s" -type "double3" 1.6114227116794111 0.37413304056559821 8.3011108732973504 ;
+	setAttr -av ".sx";
+	setAttr -av ".sy";
+	setAttr -av ".sz";
+	setAttr ".rp" -type "double3" 0 -0.50000000438425951 0.42624243585138222 ;
+	setAttr ".sp" -type "double3" 0 -0.50000000438425951 0.4999999473048663 ;
+	setAttr ".spt" -type "double3" 0 0 -0.073757511453484137 ;
+createNode mesh -n "pCubeShape23" -p "pCube23";
+	rename -uid "519780EA-44BD-6D69-8A1D-E082511ED04E";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "polySurface1";
+	rename -uid "DAE23E31-4725-9D50-8D46-CC976BB2F35C";
+	setAttr ".rp" -type "double3" -26.274950693898667 47.898122181892191 -2.4008848626582049 ;
+	setAttr ".sp" -type "double3" -26.274950693898667 47.898122181892191 -2.4008848626582049 ;
+createNode mesh -n "polySurfaceShape3" -p "polySurface1";
+	rename -uid "01355CC6-40F4-527C-540D-E784C66983ED";
+	setAttr -k off ".v";
+	setAttr -s 2 ".iog[0].og";
+	setAttr ".iog[0].og[0].gcl" -type "componentList" 1 "f[7:9]";
+	setAttr ".iog[0].og[1].gcl" -type "componentList" 1 "f[0:6]";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 7 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[1]";
+	setAttr ".gtag[1].gtagnm" -type "string" "booleanIntersection";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 3 "e[1:3]" "e[12:14]" "e[18:19]";
+	setAttr ".gtag[2].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[3:4]";
+	setAttr ".gtag[3].gtagnm" -type "string" "front";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[4].gtagnm" -type "string" "left";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 2 "f[2]" "f[9]";
+	setAttr ".gtag[5].gtagnm" -type "string" "right";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "f[5]" "f[8]";
+	setAttr ".gtag[6].gtagnm" -type "string" "top";
+	setAttr ".gtag[6].gtagcmp" -type "componentList" 1 "f[6:7]";
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 36 ".uvst[0].uvsp[0:35]" -type "float2" 0.375 0 0.40726298
+		 0 0.40726298 0.23191766 0.59273696 0.23191766 0.59273702 0 0.625 0 0.625 0.25 0.375
+		 0.25 0.125 0.25 0.125 0 0.375 1 0.375 0.75 0.40726298 0.75 0.40726298 1 0.59273702
+		 1 0.59273702 0.75 0.625 0.75 0.625 1 0.875 0 0.875 0.25 0.625 0.5 0.375 0.5 0.59273702
+		 0.51808238 0.40726298 0.51808232 0.375 0.27778494 0.375 0.43473834 0.625 0.43473834
+		 0.625 0.27778494 0.65278494 0.0064328355 0.65278494 0.25 0.80973834 0.25 0.80973834
+		 0.0064328355 0.34721506 0.0064328355 0.19026165 0.0064328355 0.19026165 0.25 0.34721506
+		 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 16 ".vt[0:15]"  -26.9770565 47.89812469 -6.19490528 -26.9770565 47.89812469 -5.2156539
+		 -26.9770565 60.52806854 -5.2156539 -26.9770565 60.52806854 0.41388416 -26.9770565 47.89812469 0.41388416
+		 -26.9770565 47.89812469 1.39313579 -26.9770565 61.51280975 1.39313579 -26.9770565 61.51280975 -6.19490528
+		 -25.84350777 61.51280975 -6.19490528 -25.84350777 47.89812469 -6.19490528 -25.84350777 47.89812469 -5.2156539
+		 -25.84350777 47.89812469 0.41388416 -25.84350777 47.89812469 1.39313579 -25.84350777 61.51280975 1.39313579
+		 -25.84350777 60.52806854 0.41388416 -25.84350777 60.52806854 -5.2156539;
+	setAttr -s 24 ".ed[0:23]"  0 1 0 1 2 0 2 3 0 3 4 0 4 5 0 5 6 0 6 7 0
+		 7 0 0 9 8 0 8 13 0 13 12 0 12 11 0 11 14 0 14 15 0 15 10 0 10 9 0 7 8 0 9 0 0 10 1 0
+		 4 11 0 12 5 0 13 6 0 2 15 0 14 3 0;
+	setAttr -s 48 ".n[0:47]" -type "float3"  1e+20 1e+20 1e+20 -1 0 0 -1
+		 0 0 -1 0 0 -1 0 0 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20
+		 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1 0 0 1 0 0 1 0 0 1 0
+		 0 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20
+		 1e+20 1e+20 1e+20 1e+20 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1e+20 1e+20 1e+20 1e+20 1e+20
+		 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20
+		 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 1e+20 0 -1 0 0 -1 0 0
+		 -1 0 0 -1 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1;
+	setAttr -s 10 -ch 48 ".fc[0:9]" -type "polyFaces" 
+		f 8 0 1 2 3 4 5 6 7
+		mu 0 8 0 1 2 3 4 5 6 7
+		f 8 8 9 10 11 12 13 14 15
+		mu 0 8 11 21 20 16 15 22 23 12
+		f 4 -8 16 -9 17
+		mu 0 4 0 7 8 9
+		f 4 -18 -16 18 -1
+		mu 0 4 10 11 12 13
+		f 4 19 -12 20 -5
+		mu 0 4 14 15 16 17
+		f 4 -21 -11 21 -6
+		mu 0 4 5 18 19 6
+		f 4 -7 -22 -10 -17
+		mu 0 4 7 6 20 21
+		f 4 22 -14 23 -3
+		mu 0 4 24 25 26 27
+		f 4 -4 -24 -13 -20
+		mu 0 4 28 29 30 31
+		f 4 -19 -15 -23 -2
+		mu 0 4 32 33 34 35;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "A61FA0CC-45E5-5A8B-2541-99BC81400AE0";
 	setAttr -s 2 ".lnk";
@@ -694,70 +1453,6 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 createNode aiImagerDenoiserOidn -s -n "defaultArnoldDenoiser";
 	rename -uid "B503ADF5-4140-FEF6-4318-AA81F87B3806";
-createNode polyCube -n "polyCube1";
-	rename -uid "E88BAF88-4B50-7960-8B8E-1585F0815E3D";
-	setAttr ".cuv" 4;
-createNode polySplit -n "polySplit1";
-	rename -uid "AA288704-470E-C680-4779-A6AF334D77B8";
-	setAttr -s 5 ".e[0:4]"  0.398485 0.398485 0.398485 0.398485 0.398485;
-	setAttr -s 5 ".d[0:4]"  -2147483648 -2147483647 -2147483646 -2147483645 -2147483648;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode polySplit -n "polySplit2";
-	rename -uid "4FC94899-4F97-66DB-03AB-B491819A2889";
-	setAttr -s 5 ".e[0:4]"  0.045230702 0.045230702 0.045230702 0.045230702
-		 0.045230702;
-	setAttr -s 5 ".d[0:4]"  -2147483648 -2147483647 -2147483646 -2147483645 -2147483648;
-	setAttr ".sma" 180;
-	setAttr ".m2015" yes;
-createNode polyTweak -n "polyTweak1";
-	rename -uid "23EA06CD-479D-605D-1669-D7AAFA1D4A6A";
-	setAttr ".uopa" yes;
-	setAttr -s 8 ".tk";
-	setAttr ".tk[1]" -type "float3" 0.041834529 0 0 ;
-	setAttr ".tk[2]" -type "float3" 0 0.23246437 0 ;
-	setAttr ".tk[3]" -type "float3" 0.04183447 -0.99442202 0 ;
-	setAttr ".tk[4]" -type "float3" 0 0.23246437 0 ;
-	setAttr ".tk[5]" -type "float3" 0.04183447 -0.99442202 0 ;
-	setAttr ".tk[7]" -type "float3" 0.041834529 0 0 ;
-	setAttr ".tk[9]" -type "float3" 0 0.23246437 0 ;
-	setAttr ".tk[10]" -type "float3" 0 0.23246437 0 ;
-createNode polyExtrudeFace -n "polyExtrudeFace1";
-	rename -uid "C22D67A0-46C7-E9B9-655C-7FAC7FB69942";
-	setAttr ".ics" -type "componentList" 1 "f[0]";
-	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
-		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -27.138069 7.2487187 -10.051281 ;
-	setAttr ".rs" 65298;
-	setAttr ".lt" -type "double3" 1.4210854715202004e-14 0 28.8330695558573 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -27.428492129013755 -0.015755491865097504 -10.051281402599916 ;
-	setAttr ".cbx" -type "double3" -26.847646363799704 14.51319288750309 -10.051281402599916 ;
-createNode polyExtrudeFace -n "polyExtrudeFace2";
-	rename -uid "2C4BC9DD-4510-45CD-42E3-F98624EE5562";
-	setAttr ".ics" -type "componentList" 1 "f[2]";
-	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
-		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -27.138071 7.2487187 -18.90764 ;
-	setAttr ".rs" 65460;
-	setAttr ".lt" -type "double3" 0 9.0390787152242657e-17 0.73809679015350582 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -27.428494049873063 -0.015755491865097504 -18.907640650800669 ;
-	setAttr ".cbx" -type "double3" -26.847647324229364 14.51319288750309 -18.907640650800669 ;
-createNode polyExtrudeFace -n "polyExtrudeFace3";
-	rename -uid "84A7CC9A-426B-E990-F956-3CB6274BCF22";
-	setAttr ".ics" -type "componentList" 1 "f[19]";
-	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
-		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
-	setAttr ".ws" yes;
-	setAttr ".pvt" -type "float3" -26.847649 7.2487187 -19.27669 ;
-	setAttr ".rs" 47917;
-	setAttr ".lt" -type "double3" 0 -1.3459627518625745e-15 54.282124691518405 ;
-	setAttr ".c[0]"  0 1 1;
-	setAttr ".cbn" -type "double3" -26.847649245088668 -0.015755491865097504 -19.64573745296935 ;
-	setAttr ".cbx" -type "double3" -26.847649245088668 14.51319288750309 -18.907640650800669 ;
 createNode animCurveTU -n "pCube3_visibility";
 	rename -uid "A758F84D-470F-1F56-46DC-1D967CF73681";
 	setAttr ".tan" 9;
@@ -917,65 +1612,6 @@ createNode animCurveTU -n "pCube1_scaleZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 39.307344277443384;
-createNode polyCube -n "polyCube3";
-	rename -uid "BF223D75-458C-8583-546D-D6A0166F2E97";
-	setAttr ".cuv" 4;
-createNode animCurveTU -n "pCube2_visibility";
-	rename -uid "EA9B79F9-4925-AA17-8C02-E9AF5C152B02";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-	setAttr ".kot[0]"  5;
-	setAttr ".kox[0]"  0;
-	setAttr ".koy[0]"  0;
-createNode animCurveTL -n "pCube2_translateX";
-	rename -uid "3FCF92EA-40D8-9203-C895-78877FEDF655";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTL -n "pCube2_translateY";
-	rename -uid "59D40F16-4816-CC35-E7D7-6DB0AD48AE5D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0.49999999600459177;
-createNode animCurveTU -n "pCube2_scaleZ";
-	rename -uid "4D9284FD-490E-5E23-BAA9-378C85DDD85F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pCube2_scaleY";
-	rename -uid "259C1745-48D4-56F5-86F9-099769D17E7B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTU -n "pCube2_scaleX";
-	rename -uid "276303C0-445F-BE02-F33B-7D84C5381154";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 1;
-createNode animCurveTL -n "pCube2_translateZ";
-	rename -uid "9DB86492-458B-0614-29E4-B3B382522D88";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pCube2_rotateY";
-	rename -uid "01408AA2-47ED-A965-A8A2-EC8D1751EAB0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pCube2_rotateX";
-	rename -uid "7E12380E-411A-F2E0-4974-4A9BD33292F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode animCurveTA -n "pCube2_rotateZ";
-	rename -uid "5AAC2BCE-4A6D-E982-C1C6-80B5D94DB892";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  1 0;
-createNode polyCube -n "polyCube2";
-	rename -uid "4A5C63DC-438C-3A91-AE50-A7ACFBC2823D";
-	setAttr ".cuv" 4;
 createNode animCurveTU -n "pCube7_scaleX";
 	rename -uid "427532BB-4045-89DB-091C-288F58A97353";
 	setAttr ".tan" 18;
@@ -1035,14 +1671,14 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 330\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n"
 		+ "            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n"
 		+ "            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n"
 		+ "            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n"
-		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
+		+ "            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n"
 		+ "            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n"
 		+ "            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n"
-		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
+		+ "            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 555\n            -height 329\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            -pluginObjects \"mayaUsdProxyShapeBaseDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n"
 		+ "\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 1\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n"
 		+ "            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n"
 		+ "            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1117\n            -height 706\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n"
@@ -1077,6 +1713,531 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "60235051-4164-6C07-6FBB-0783C8CC5390";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
+createNode polyCube -n "polyCube4";
+	rename -uid "84800E0C-47C8-FDFE-D6E0-6AA7AAAA2A2F";
+	setAttr ".cuv" 4;
+createNode polyTweak -n "polyTweak3";
+	rename -uid "546FE028-4A3A-67C3-2E47-66B2F25BF9D9";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  0.068475403 0 -0.068475403
+		 -0.068475403 0 -0.068475403 -0.13276052 5.41892862 0.13276044 0.13276052 5.41892862
+		 0.13276044 -0.13276052 5.41892862 -0.13276044 0.13276052 5.41892862 -0.13276044 0.068475403
+		 0 0.068475403 -0.068475403 0 0.068475403;
+createNode deleteComponent -n "deleteComponent1";
+	rename -uid "CE60DEF9-4FDF-A5B1-8E82-2896CEE8F08C";
+	setAttr ".dc" -type "componentList" 1 "f[1]";
+createNode polyExtrudeFace -n "polyExtrudeFace4";
+	rename -uid "4B765605-4C64-9CFE-68CE-3A805C1448D3";
+	setAttr ".ics" -type "componentList" 1 "f[3]";
+	setAttr ".ix" -type "matrix" 8.8385372869988661 0 0 0 0 2.1306277175505515 0 0 0 0 3.8795287201169133 0
+		 0 2.4601575315583171 7.0260545025018235 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0 3.0915351 7.0260544 ;
+	setAttr ".rs" 47882;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -4.419268643499433 3.0915351527837394 5.0862901424433673 ;
+	setAttr ".cbx" -type "double3" 4.419268643499433 3.0915351527837394 8.9658188625602797 ;
+createNode polyTweak -n "polyTweak2";
+	rename -uid "E36AD4F1-4AF9-AC84-4941-918955432632";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".tk";
+	setAttr ".tk[8]" -type "float3" 0.020226492 0 0.033090875 ;
+	setAttr ".tk[9]" -type "float3" -0.020226492 0 0.033090875 ;
+	setAttr ".tk[10]" -type "float3" -0.020226492 0 -0.033090875 ;
+	setAttr ".tk[11]" -type "float3" 0.020226492 0 -0.033090875 ;
+createNode polyExtrudeFace -n "polyExtrudeFace5";
+	rename -uid "5F753B3C-44BB-6596-CC03-62AF4F59AE0F";
+	setAttr ".ics" -type "componentList" 1 "f[3]";
+	setAttr ".ix" -type "matrix" 8.8385372869988661 0 0 0 0 2.1306277175505515 0 0 0 0 3.8795287201169133 0
+		 0 60.346193890115458 7.0260545025018235 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" 0 60.97757 7.0260539 ;
+	setAttr ".rs" 64314;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -4.2404961584149383 60.977571384345573 5.2146667359780761 ;
+	setAttr ".cbx" -type "double3" 4.2404961584149383 60.977571384345573 8.837440881597983 ;
+createNode polyCube -n "polyCube3";
+	rename -uid "BF223D75-458C-8583-546D-D6A0166F2E97";
+	setAttr ".cuv" 4;
+createNode polySplit -n "polySplit1";
+	rename -uid "AA288704-470E-C680-4779-A6AF334D77B8";
+	setAttr -s 5 ".e[0:4]"  0.398485 0.398485 0.398485 0.398485 0.398485;
+	setAttr -s 5 ".d[0:4]"  -2147483648 -2147483647 -2147483646 -2147483645 -2147483648;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyTweak -n "polyTweak1";
+	rename -uid "23EA06CD-479D-605D-1669-D7AAFA1D4A6A";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk";
+	setAttr ".tk[1]" -type "float3" 0.041834529 0 0 ;
+	setAttr ".tk[2]" -type "float3" 0 0.23246437 0 ;
+	setAttr ".tk[3]" -type "float3" 0.04183447 -0.99442202 0 ;
+	setAttr ".tk[4]" -type "float3" 0 0.23246437 0 ;
+	setAttr ".tk[5]" -type "float3" 0.04183447 -0.99442202 0 ;
+	setAttr ".tk[7]" -type "float3" 0.041834529 0 0 ;
+	setAttr ".tk[9]" -type "float3" 0 0.23246437 0 ;
+	setAttr ".tk[10]" -type "float3" 0 0.23246437 0 ;
+createNode polySplit -n "polySplit2";
+	rename -uid "4FC94899-4F97-66DB-03AB-B491819A2889";
+	setAttr -s 5 ".e[0:4]"  0.045230702 0.045230702 0.045230702 0.045230702
+		 0.045230702;
+	setAttr -s 5 ".d[0:4]"  -2147483648 -2147483647 -2147483646 -2147483645 -2147483648;
+	setAttr ".sma" 180;
+	setAttr ".m2015" yes;
+createNode polyExtrudeFace -n "polyExtrudeFace1";
+	rename -uid "C22D67A0-46C7-E9B9-655C-7FAC7FB69942";
+	setAttr ".ics" -type "componentList" 1 "f[0]";
+	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
+		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -27.138069 7.2487187 -10.051281 ;
+	setAttr ".rs" 65298;
+	setAttr ".lt" -type "double3" 1.4210854715202004e-14 0 28.8330695558573 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -27.428492129013755 -0.015755491865097504 -10.051281402599916 ;
+	setAttr ".cbx" -type "double3" -26.847646363799704 14.51319288750309 -10.051281402599916 ;
+createNode polyExtrudeFace -n "polyExtrudeFace2";
+	rename -uid "2C4BC9DD-4510-45CD-42E3-F98624EE5562";
+	setAttr ".ics" -type "componentList" 1 "f[2]";
+	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
+		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -27.138071 7.2487187 -18.90764 ;
+	setAttr ".rs" 65460;
+	setAttr ".lt" -type "double3" 0 9.0390787152242657e-17 0.73809679015350582 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -27.428494049873063 -0.015755491865097504 -18.907640650800669 ;
+	setAttr ".cbx" -type "double3" -26.847647324229364 14.51319288750309 -18.907640650800669 ;
+createNode polyExtrudeFace -n "polyExtrudeFace3";
+	rename -uid "84A7CC9A-426B-E990-F956-3CB6274BCF22";
+	setAttr ".ics" -type "componentList" 1 "f[19]";
+	setAttr ".ix" -type "matrix" 32.226671535727625 0 0 0 0 11.788534172947744 0 0 0 0 8.8563592482007518 0
+		 -11.315156361149942 5.8785115946087743 -14.479461026700292 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -26.847649 7.2487187 -19.27669 ;
+	setAttr ".rs" 47917;
+	setAttr ".lt" -type "double3" 0 -1.3459627518625745e-15 54.282124691518405 ;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -26.847649245088668 -0.015755491865097504 -19.64573745296935 ;
+	setAttr ".cbx" -type "double3" -26.847649245088668 14.51319288750309 -18.907640650800669 ;
+createNode polyCube -n "polyCube1";
+	rename -uid "E88BAF88-4B50-7960-8B8E-1585F0815E3D";
+	setAttr ".cuv" 4;
+createNode polyTweak -n "polyTweak4";
+	rename -uid "1A92E535-4C5D-2BB0-AB24-36BB43C03498";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".tk";
+	setAttr ".tk[12]" -type "float3" 0 -0.10136779 0 ;
+	setAttr ".tk[13]" -type "float3" 0 -0.10136779 0 ;
+	setAttr ".tk[14]" -type "float3" 0 -0.10136779 0 ;
+	setAttr ".tk[15]" -type "float3" 0 -0.10136779 0 ;
+createNode transformGeometry -n "transformGeometry1";
+	rename -uid "DC8B3D21-456B-A1B3-51F9-E982D191C98C";
+	setAttr ".txf" -type "matrix" 8.8385372869988661 0 0 0 0 2.1306277175505515 0 0
+		 0 0 3.8795287201169133 0 0 53.412424747522834 7.0260545025018235 1;
+createNode polyAutoProj -n "polyAutoProj1";
+	rename -uid "F50E2154-4D29-10F6-C948-F2B9355ABABD";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:13]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 8.8385372161865234 8.8385372161865234 8.8385372161865234 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV1";
+	rename -uid "5459AFE2-4E55-AFE7-F457-81B5FFE71C9C";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[4]" -type "float2" -0.5580228 -0.26091513 ;
+	setAttr ".uvtk[5]" -type "float2" -0.27501684 0.022090822 ;
+	setAttr ".uvtk[6]" -type "float2" -0.30667233 0.053746313 ;
+	setAttr ".uvtk[7]" -type "float2" -0.58967829 -0.22925964 ;
+createNode polyMapSewMove -n "polyMapSewMove1";
+	rename -uid "7296D04D-4083-C515-4D20-EF86A5B3E919";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyTweakUV -n "polyTweakUV2";
+	rename -uid "1A8C1202-4418-6ADC-29D7-098F9FDC0213";
+	setAttr ".uopa" yes;
+	setAttr -s 11 ".uvtk";
+	setAttr ".uvtk[4]" -type "float2" -0.329373 -0.03165549 ;
+	setAttr ".uvtk[5]" -type "float2" -0.32937294 -0.03165549 ;
+	setAttr ".uvtk[6]" -type "float2" -0.32937294 -0.03165549 ;
+	setAttr ".uvtk[7]" -type "float2" -0.329373 -0.03165549 ;
+	setAttr ".uvtk[24]" -type "float2" -0.329373 -0.031655557 ;
+	setAttr ".uvtk[25]" -type "float2" -0.329373 -0.031655557 ;
+	setAttr ".uvtk[26]" -type "float2" -0.329373 -0.03165549 ;
+	setAttr ".uvtk[27]" -type "float2" -0.32937294 -0.031655557 ;
+	setAttr ".uvtk[28]" -type "float2" -0.32937294 -0.031655557 ;
+	setAttr ".uvtk[29]" -type "float2" -0.32937294 -0.03165549 ;
+createNode polyMapSewMove -n "polyMapSewMove2";
+	rename -uid "AB525687-41CA-68A0-4ECA-C3A925D0B631";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyTweakUV -n "polyTweakUV3";
+	rename -uid "467A7A38-479D-D434-4928-E8A98A7B6A92";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[0:3]" -type "float2" -0.64218056 -0.93732893 -0.92518657
+		 -0.65432292 -0.95684201 -0.68597835 -0.67383599 -0.96898437;
+createNode polyMapSewMove -n "polyMapSewMove3";
+	rename -uid "14E34279-4B15-E708-F893-9597683F9CB1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyTweakUV -n "polyTweakUV4";
+	rename -uid "C139F6FF-4196-25B0-E9C1-B1AA32620451";
+	setAttr ".uopa" yes;
+	setAttr -s 18 ".uvtk";
+	setAttr ".uvtk[0]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[1]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[2]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[3]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[4]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[5]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[6]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[7]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[16]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[17]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[22]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[23]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[24]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[25]" -type "float2" -0.40651584 0 ;
+	setAttr ".uvtk[26]" -type "float2" -0.084335908 -0.031655442 ;
+	setAttr ".uvtk[27]" -type "float2" -0.084335908 -0.031655453 ;
+	setAttr ".uvtk[28]" -type "float2" -0.084335908 -0.031655453 ;
+	setAttr ".uvtk[29]" -type "float2" -0.084335908 -0.031655442 ;
+createNode polyMapSewMove -n "polyMapSewMove4";
+	rename -uid "041835D1-4151-9E51-B4FD-ECB946728F77";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV5";
+	rename -uid "3562AEDB-41EC-04AE-D671-758A82C602A3";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[28]" -type "float2" -0.72856528 -0.03165523 ;
+	setAttr ".uvtk[29]" -type "float2" -0.72856528 -0.031655453 ;
+	setAttr ".uvtk[30]" -type "float2" -0.72856528 -0.031655453 ;
+	setAttr ".uvtk[31]" -type "float2" -0.72856528 -0.03165523 ;
+createNode polyMapSewMove -n "polyMapSewMove5";
+	rename -uid "8025AD26-43FE-805C-DF95-128C601D5D0D";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV6";
+	rename -uid "00E8661D-48C8-2834-4E5D-7E80ED569502";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[30]" -type "float2" -0.28665942 2.3166649e-07 ;
+	setAttr ".uvtk[31]" -type "float2" -0.28665942 1.268927e-07 ;
+	setAttr ".uvtk[32]" -type "float2" -0.28665942 1.268927e-07 ;
+	setAttr ".uvtk[33]" -type "float2" -0.28665942 2.3166649e-07 ;
+createNode polyMapSewMove -n "polyMapSewMove6";
+	rename -uid "621D1EE1-412A-568A-B6B3-DBA4CA25E031";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[22]";
+createNode polyTweakUV -n "polyTweakUV7";
+	rename -uid "1091F283-47CA-914F-B88E-2F8FE9BE8692";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[12]" -type "float2" 0.024672836 0.011763453 ;
+	setAttr ".uvtk[13]" -type "float2" -0.23960331 -0.25251269 ;
+	setAttr ".uvtk[14]" -type "float2" -0.22384837 -0.26826763 ;
+	setAttr ".uvtk[15]" -type "float2" 0.040427774 -0.0039914846 ;
+createNode polyMapSewMove -n "polyMapSewMove7";
+	rename -uid "F2F48328-44BC-A3B7-CC73-5E81364FDFDA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[27]";
+createNode polyTweakUV -n "polyTweakUV8";
+	rename -uid "4792A5BA-4FBC-0EBD-0A5C-6AA770FAEB24";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[30]" -type "float2" -0.030015647 1.5669502e-07 ;
+	setAttr ".uvtk[31]" -type "float2" -0.030015647 2.7113128e-07 ;
+	setAttr ".uvtk[32]" -type "float2" -0.030015647 2.7113128e-07 ;
+	setAttr ".uvtk[33]" -type "float2" -0.030015647 1.5669502e-07 ;
+createNode polyMapSewMove -n "polyMapSewMove8";
+	rename -uid "F245A903-4B17-C7EB-37D3-00B106C99647";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[26]";
+createNode polyTweakUV -n "polyTweakUV9";
+	rename -uid "1EA7EB47-4BEF-C892-B9C3-7A9D3A9E5A4C";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[8]" -type "float2" -0.26149374 -0.63842261 ;
+	setAttr ".uvtk[9]" -type "float2" 0.0027825236 -0.90269881 ;
+	setAttr ".uvtk[10]" -type "float2" 0.018537521 -0.88694382 ;
+	setAttr ".uvtk[11]" -type "float2" -0.24573874 -0.62266767 ;
+createNode polyMapSewMove -n "polyMapSewMove9";
+	rename -uid "A1A1DF8E-464B-5E9F-9EEF-3DACA86ADE98";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[24]";
+createNode polyTweakUV -n "polyTweakUV10";
+	rename -uid "44FF2155-44C0-9917-FF47-D480A0292EFE";
+	setAttr ".uopa" yes;
+	setAttr -s 30 ".uvtk[0:29]" -type "float2" 0.27113372 0.3246139 0.40461498
+		 0.3246139 0.40461498 0.33954433 0.27113369 0.33954433 0.40461498 0.020510085 0.27113372
+		 0.020510085 0.27113372 0.0055796579 0.40461498 0.0055796579 -0.42078263 0.31711423
+		 -0.54542989 0.31711426 -0.54542989 0.30968335 -0.42078263 0.30968335 -0.54542989
+		 0.01045049 -0.42078263 0.010450728 -0.42078263 0.01788158 -0.54542983 0.017881401
+		 0.27113375 -0.29852414 0.40461504 -0.29852414 0.40019792 0.31846294 0.40019792 0.026660988
+		 0.27555066 0.31846294 0.27555066 0.026660988 0.25620323 0.3246139 0.25620323 0.020510085
+		 0.41954547 0.020510085 0.41954547 0.3246139 -0.41335166 0.01788152 -0.41335166 0.30968338
+		 -0.55286086 0.30968338 -0.5528608 0.017881401;
+createNode polyAutoProj -n "polyAutoProj2";
+	rename -uid "91B8E917-428A-BEE3-3651-D6A354832F2A";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:4]";
+	setAttr ".ix" -type "matrix" 0.23458505888736908 0 0 0 0 0.23458505888736908 0 0
+		 0 0 0.23458505888736908 0 4.0087934452502898 52.464403427690982 8.6166060631040615 1;
+	setAttr ".s" -type "double3" 1.5057847490670682 1.5057847490670682 1.5057847490670682 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV11";
+	rename -uid "D72946A9-41E5-7B42-D024-DFB1B109C633";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[8]" -type "float2" -0.17167145 -0.13391812 ;
+	setAttr ".uvtk[9]" -type "float2" -0.17167145 -0.13391812 ;
+	setAttr ".uvtk[10]" -type "float2" -0.17167145 -0.13391812 ;
+	setAttr ".uvtk[11]" -type "float2" -0.17167145 -0.13391812 ;
+createNode polyMapSewMove -n "polyMapSewMove10";
+	rename -uid "861DF63C-4C88-BEE1-A192-8E825FEA5FB1";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[10]";
+createNode polyTweakUV -n "polyTweakUV12";
+	rename -uid "831CDB37-4F40-0E2C-1585-0F80CF7AB388";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[10]" -type "float2" 0.7428059 1.5599653e-08 ;
+	setAttr ".uvtk[11]" -type "float2" 0.60888773 -0.13391814 ;
+	setAttr ".uvtk[12]" -type "float2" 1.5736783 -1.1611596 ;
+	setAttr ".uvtk[13]" -type "float2" 1.7700474 -0.96479058 ;
+createNode polyMapSewMove -n "polyMapSewMove11";
+	rename -uid "AB862B80-46ED-17C6-C929-A797BF7B0F4E";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV13";
+	rename -uid "A59656D4-4EF4-94A1-C146-F289C7EBDBFD";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[12]" -type "float2" -0.55899668 0.03122557 ;
+	setAttr ".uvtk[13]" -type "float2" -0.75536573 -0.16514349 ;
+	setAttr ".uvtk[14]" -type "float2" 0.2718758 -1.1299342 ;
+	setAttr ".uvtk[15]" -type "float2" 0.40579396 -0.99601603 ;
+createNode polyMapSewMove -n "polyMapSewMove12";
+	rename -uid "30DBE11A-47B2-8968-7A0C-A6B11B0AFD08";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[3]";
+createNode polyTweakUV -n "polyTweakUV14";
+	rename -uid "5768EC77-489E-E9E0-340D-678078CD0C69";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[0:3]" -type "float2" 0.20289697 -0.13391814 0.20289697
+		 -0.13391814 0.20289697 -0.13391837 0.20289697 -0.13391837;
+createNode polyMapSewMove -n "polyMapSewMove13";
+	rename -uid "7BC7A9E8-4C17-6DF7-ADAE-F5A178DF2C29";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[11]";
+createNode polyTweakUV -n "polyTweakUV15";
+	rename -uid "614B0087-409E-68BB-1E08-07AA2076DCF0";
+	setAttr ".uopa" yes;
+	setAttr -s 12 ".uvtk[0:11]" -type "float2" 0.021805946 0.90330553 0.13355614
+		 0.90330553 0.15961283 1.73444784 -0.0042507537 1.73444784 0.1335562 0.79155523 0.021805946
+		 0.79155523 -0.0042506941 -0.039587408 0.15961283 -0.039587408 -0.8093366 0.92936176
+		 -0.8093366 0.76549822 0.96469885 0.76549858 0.96469885 0.92936206;
+createNode transferAttributes -n "transferAttributes1";
+	rename -uid "845D1533-430D-DF86-CC11-12911B5D22A1";
+	setAttr -s 3 ".src";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 3;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode transferAttributes -n "transferAttributes2";
+	rename -uid "D4494A61-4AD4-2E9A-1BC9-F79584CAC303";
+	setAttr -s 3 ".src";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 3;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode transferAttributes -n "transferAttributes3";
+	rename -uid "E2D46F6E-4017-3079-650D-6AA5F667E7D3";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 3;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode transferAttributes -n "transferAttributes4";
+	rename -uid "8631F514-4A6F-C6B5-6840-EF8153F7929F";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 5;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode transferAttributes -n "transferAttributes5";
+	rename -uid "DB6EF2F8-470F-39DD-7303-37BBA60891DD";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 5;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode transferAttributes -n "transferAttributes6";
+	rename -uid "748C1988-4822-45F5-FABC-A59F378667ED";
+	setAttr ".uvs" 2;
+	setAttr ".col" 2;
+	setAttr ".spa" 5;
+	setAttr ".sus" -type "string" "map1";
+	setAttr ".tus" -type "string" "map1";
+createNode polyCube -n "polyCube5";
+	rename -uid "277AE9A7-49A5-8C00-1ED9-B3A58143AEE3";
+	setAttr ".cuv" 4;
+createNode polyTweak -n "polyTweak5";
+	rename -uid "75A0E2AF-40E7-2E5C-F184-058BF37D6B6E";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".tk[4:7]" -type "float3"  0 0 -0.52563423 0 0 -0.52563423
+		 0 0 -0.52563423 0 0 -0.52563423;
+createNode transformGeometry -n "transformGeometry2";
+	rename -uid "8611E334-4F25-9D2F-4B70-48AF5AF9CF14";
+	setAttr ".txf" -type "matrix" 8.8130818417473975 0 0 0 0 0.1113314417574842 0 0
+		 0 0 2.3415389836973581 0 0 1.8084206692050562 17.041663191886364 1;
+createNode polyAutoProj -n "polyAutoProj3";
+	rename -uid "5EE33081-4880-4A78-4DF1-009DA4FC63A3";
+	setAttr ".cch" yes;
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "f[0:5]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
+	setAttr ".s" -type "double3" 8.8130817413330078 8.8130817413330078 8.8130817413330078 ;
+	setAttr ".ps" 0.20000000298023224;
+	setAttr ".dl" yes;
+createNode polyTweakUV -n "polyTweakUV16";
+	rename -uid "9C7F0FE5-4EEB-5D32-491B-78BBCA089511";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[16]" -type "float2" 0.85307235 -7.4505806e-09 ;
+	setAttr ".uvtk[17]" -type "float2" 0.85307235 0 ;
+	setAttr ".uvtk[18]" -type "float2" 0.85307235 0 ;
+	setAttr ".uvtk[19]" -type "float2" 0.85307235 -7.4505806e-09 ;
+createNode polyMapSewMove -n "polyMapSewMove14";
+	rename -uid "2F6D9714-43C6-2E06-4971-6AA5ED5426CA";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[0]";
+createNode polyTweakUV -n "polyTweakUV17";
+	rename -uid "6FE35EB9-4A16-9F93-947B-8A9CD7978610";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[8]" -type "float2" 0.8457911 7.3341653e-09 ;
+	setAttr ".uvtk[9]" -type "float2" 0.8457911 1.4784746e-08 ;
+	setAttr ".uvtk[10]" -type "float2" 0.8457911 1.4784746e-08 ;
+	setAttr ".uvtk[11]" -type "float2" 0.8457911 7.3341653e-09 ;
+createNode polyMapSewMove -n "polyMapSewMove15";
+	rename -uid "925F1B44-4461-7538-2601-82A3C9DBC861";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[1]";
+createNode polyTweakUV -n "polyTweakUV18";
+	rename -uid "A6A80DDD-4348-BBD1-2B1B-7A9BD3A7CD3E";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[4]" -type "float2" 0.39056093 0.60486889 ;
+	setAttr ".uvtk[5]" -type "float2" -0.013168275 1.0085981 ;
+	setAttr ".uvtk[6]" -type "float2" -0.025750458 0.99601591 ;
+	setAttr ".uvtk[7]" -type "float2" 0.37797874 0.59228677 ;
+createNode polyMapSewMove -n "polyMapSewMove16";
+	rename -uid "A9A924CE-4AD1-D17A-590C-22B47139A2CB";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[6]";
+createNode polyTweakUV -n "polyTweakUV19";
+	rename -uid "936034BF-44BF-F889-E8BF-8BA266F8AEE2";
+	setAttr ".uopa" yes;
+	setAttr -s 4 ".uvtk[0:3]" -type "float2" 0.006516099 -0.41631138 0.4102453
+		 -0.012582159 0.39766312 2.3748726e-08 -0.0060660839 -0.4037292;
+createNode polyMapSewMove -n "polyMapSewMove17";
+	rename -uid "04800B69-41A2-B936-319F-FF916F6268BD";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[7]";
+createNode polyTweakUV -n "polyTweakUV20";
+	rename -uid "AD9FD7DF-4C4C-3D83-802D-DBADDA69B2A2";
+	setAttr ".uopa" yes;
+	setAttr -s 5 ".uvtk";
+	setAttr ".uvtk[12]" -type "float2" 0.83972514 7.21775e-09 ;
+	setAttr ".uvtk[13]" -type "float2" 0.83972514 1.4901161e-08 ;
+	setAttr ".uvtk[14]" -type "float2" 0.83972514 1.4901161e-08 ;
+	setAttr ".uvtk[15]" -type "float2" 0.83972514 7.21775e-09 ;
+createNode polyMapSewMove -n "polyMapSewMove18";
+	rename -uid "4BEEB0F0-4A37-0B18-4DA4-FDA24440F35B";
+	setAttr ".uopa" yes;
+	setAttr ".ics" -type "componentList" 1 "e[2]";
+createNode polyTweakUV -n "polyTweakUV21";
+	rename -uid "3AAC9EA7-40F4-0C8F-5958-A1AFAD53923A";
+	setAttr ".uopa" yes;
+	setAttr -s 14 ".uvtk[0:13]" -type "float2" -0.12520003 0.056762904 -0.34642154
+		 0.056762874 -0.34642154 0.049868524 -0.12520003 0.049868524 -0.34642154 -0.50278789
+		 -0.12520003 -0.50278789 -0.12520003 -0.49589354 -0.34642154 -0.4958936 0.10291579
+		 -0.4958936 0.10291579 0.049868539 -0.11830567 0.049868532 -0.11830567 -0.4958936
+		 -0.35331577 0.049868524 -0.35331577 -0.4958936;
+createNode polyCube -n "polyCube6";
+	rename -uid "CB2AF29E-4B96-C68B-EF4D-57ABC6B15969";
+	setAttr ".cuv" 4;
+createNode animCurveTL -n "pCube23_translateX";
+	rename -uid "6FE1251B-43E2-FC26-17A7-3AA50CB3C01A";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 -25.450534070635761;
+createNode animCurveTL -n "pCube23_translateY";
+	rename -uid "F22D07AF-47E9-355D-E7B9-E8AFAF009801";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 60.067547931989637;
+createNode animCurveTL -n "pCube23_translateZ";
+	rename -uid "A7A1B883-414D-D2E4-14B1-DD98D76B4D03";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1.0025182119223606;
+createNode animCurveTU -n "pCube23_visibility";
+	rename -uid "89B37B47-4CDB-71B4-FD7E-D2B97FFF0BF5";
+	setAttr ".tan" 9;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 1;
+	setAttr ".kot[0]"  5;
+	setAttr ".kox[0]"  0;
+	setAttr ".koy[0]"  0;
+createNode animCurveTA -n "pCube23_rotateX";
+	rename -uid "A6269A04-4C96-E28B-D3F6-01ACC6E92691";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pCube23_rotateY";
+	rename -uid "3CA655F1-411B-CA82-445F-A98CF21A58D4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTA -n "pCube23_rotateZ";
+	rename -uid "9A42FF06-44F0-B8A3-B3C2-E1A9D0249284";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0;
+createNode animCurveTU -n "pCube23_scaleX";
+	rename -uid "34A82180-4CCA-FDE0-E68A-29B5E2E5A5DF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.75558647622489683;
+createNode animCurveTU -n "pCube23_scaleY";
+	rename -uid "22BF1E01-4F75-C2DD-6536-E393379FC9EF";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.32068546316949414;
+createNode animCurveTU -n "pCube23_scaleZ";
+	rename -uid "7B3416A6-4116-1EB9-E76C-E7931182E1A4";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr ".ktv[0]"  1 0.85248496154638242;
+createNode groupId -n "groupId5";
+	rename -uid "2C583266-4C24-9201-4B40-BB92094AE753";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId7";
+	rename -uid "7A958FF2-427A-4E3D-A07F-6890F5802D3F";
+	setAttr ".ihi" 0;
+createNode groupId -n "groupId6";
+	rename -uid "0063E873-466B-301B-0F41-5786A12C6588";
+	setAttr ".ihi" 0;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -1102,10 +2263,12 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 12 ".dsm";
+	setAttr -s 23 ".dsm";
 	setAttr ".ro" yes;
+	setAttr -s 2 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
+select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
@@ -1124,6 +2287,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "pCube1_visibility.o" "pCube1.v";
 connectAttr "pCube1_translateX.o" "pCube1.tx";
 connectAttr "pCube1_translateY.o" "pCube1.ty";
@@ -1135,17 +2300,6 @@ connectAttr "pCube1_scaleX.o" "pCube1.sx";
 connectAttr "pCube1_scaleY.o" "pCube1.sy";
 connectAttr "pCube1_scaleZ.o" "pCube1.sz";
 connectAttr "polyCube1.out" "pCubeShape1.i";
-connectAttr "pCube2_visibility.o" "pCube2.v";
-connectAttr "pCube2_translateX.o" "pCube2.tx";
-connectAttr "pCube2_translateY.o" "pCube2.ty";
-connectAttr "pCube2_translateZ.o" "pCube2.tz";
-connectAttr "pCube2_rotateX.o" "pCube2.rx";
-connectAttr "pCube2_rotateY.o" "pCube2.ry";
-connectAttr "pCube2_rotateZ.o" "pCube2.rz";
-connectAttr "pCube2_scaleX.o" "pCube2.sx";
-connectAttr "pCube2_scaleY.o" "pCube2.sy";
-connectAttr "pCube2_scaleZ.o" "pCube2.sz";
-connectAttr "polyCube2.out" "pCubeShape2.i";
 connectAttr "pCube3_visibility.o" "pCube3.v";
 connectAttr "pCube3_translateX.o" "pCube3.tx";
 connectAttr "pCube3_translateY.o" "pCube3.ty";
@@ -1178,6 +2332,31 @@ connectAttr "pCube7_rotateZ.o" "pCube7.rz";
 connectAttr "pCube7_scaleX.o" "pCube7.sx";
 connectAttr "pCube7_scaleY.o" "pCube7.sy";
 connectAttr "pCube7_scaleZ.o" "pCube7.sz";
+connectAttr "polyTweakUV10.out" "pCubeShape10.i";
+connectAttr "polyTweakUV10.uvtk[0]" "pCubeShape10.uvst[0].uvtw";
+connectAttr "polyTweakUV15.out" "pCubeShape13.i";
+connectAttr "polyTweakUV15.uvtk[0]" "pCubeShape13.uvst[0].uvtw";
+connectAttr "transferAttributes4.og[0]" "pCubeShape14.i";
+connectAttr "transferAttributes6.og[0]" "pCubeShape15.i";
+connectAttr "transferAttributes5.og[0]" "pCubeShape16.i";
+connectAttr "polyTweakUV21.out" "pCubeShape22.i";
+connectAttr "polyTweakUV21.uvtk[0]" "pCubeShape22.uvst[0].uvtw";
+connectAttr "pCube23_translateX.o" "pCube23.tx";
+connectAttr "pCube23_translateY.o" "pCube23.ty";
+connectAttr "pCube23_translateZ.o" "pCube23.tz";
+connectAttr "pCube23_visibility.o" "pCube23.v";
+connectAttr "pCube23_rotateX.o" "pCube23.rx";
+connectAttr "pCube23_rotateY.o" "pCube23.ry";
+connectAttr "pCube23_rotateZ.o" "pCube23.rz";
+connectAttr "pCube23_scaleX.o" "pCube23.sx";
+connectAttr "pCube23_scaleY.o" "pCube23.sy";
+connectAttr "pCube23_scaleZ.o" "pCube23.sz";
+connectAttr "polyCube6.out" "pCubeShape23.i";
+connectAttr "groupId6.id" "polySurfaceShape3.iog.og[0].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape3.iog.og[0].gco";
+connectAttr "groupId7.id" "polySurfaceShape3.iog.og[1].gid";
+connectAttr ":initialShadingGroup.mwc" "polySurfaceShape3.iog.og[1].gco";
+connectAttr "groupId5.id" "polySurfaceShape3.ciog.cog[0].cgid";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1190,26 +2369,117 @@ connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drive
 		 -na;
 connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
 connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
+connectAttr "polyCube4.out" "polyTweak3.ip";
+connectAttr "polyTweak3.out" "deleteComponent1.ig";
+connectAttr "|pCube10|polySurfaceShape2.o" "polyExtrudeFace4.ip";
+connectAttr "pCubeShape10.wm" "polyExtrudeFace4.mp";
+connectAttr "polyExtrudeFace4.out" "polyTweak2.ip";
+connectAttr "polyTweak2.out" "polyExtrudeFace5.ip";
+connectAttr "pCubeShape10.wm" "polyExtrudeFace5.mp";
 connectAttr "polySurfaceShape1.o" "polySplit1.ip";
-connectAttr "polyTweak1.out" "polySplit2.ip";
 connectAttr "polySplit1.out" "polyTweak1.ip";
+connectAttr "polyTweak1.out" "polySplit2.ip";
 connectAttr "polySplit2.out" "polyExtrudeFace1.ip";
 connectAttr "pCubeShape3.wm" "polyExtrudeFace1.mp";
 connectAttr "polyExtrudeFace1.out" "polyExtrudeFace2.ip";
 connectAttr "pCubeShape3.wm" "polyExtrudeFace2.mp";
 connectAttr "polyExtrudeFace2.out" "polyExtrudeFace3.ip";
 connectAttr "pCubeShape3.wm" "polyExtrudeFace3.mp";
+connectAttr "polyExtrudeFace5.out" "polyTweak4.ip";
+connectAttr "polyTweak4.out" "transformGeometry1.ig";
+connectAttr "transformGeometry1.og" "polyAutoProj1.ip";
+connectAttr "pCubeShape10.wm" "polyAutoProj1.mp";
+connectAttr "polyAutoProj1.out" "polyTweakUV1.ip";
+connectAttr "polyTweakUV1.out" "polyMapSewMove1.ip";
+connectAttr "polyMapSewMove1.out" "polyTweakUV2.ip";
+connectAttr "polyTweakUV2.out" "polyMapSewMove2.ip";
+connectAttr "polyMapSewMove2.out" "polyTweakUV3.ip";
+connectAttr "polyTweakUV3.out" "polyMapSewMove3.ip";
+connectAttr "polyMapSewMove3.out" "polyTweakUV4.ip";
+connectAttr "polyTweakUV4.out" "polyMapSewMove4.ip";
+connectAttr "polyMapSewMove4.out" "polyTweakUV5.ip";
+connectAttr "polyTweakUV5.out" "polyMapSewMove5.ip";
+connectAttr "polyMapSewMove5.out" "polyTweakUV6.ip";
+connectAttr "polyTweakUV6.out" "polyMapSewMove6.ip";
+connectAttr "polyMapSewMove6.out" "polyTweakUV7.ip";
+connectAttr "polyTweakUV7.out" "polyMapSewMove7.ip";
+connectAttr "polyMapSewMove7.out" "polyTweakUV8.ip";
+connectAttr "polyTweakUV8.out" "polyMapSewMove8.ip";
+connectAttr "polyMapSewMove8.out" "polyTweakUV9.ip";
+connectAttr "polyTweakUV9.out" "polyMapSewMove9.ip";
+connectAttr "polyMapSewMove9.out" "polyTweakUV10.ip";
+connectAttr "deleteComponent1.og" "polyAutoProj2.ip";
+connectAttr "pCubeShape13.wm" "polyAutoProj2.mp";
+connectAttr "polyAutoProj2.out" "polyTweakUV11.ip";
+connectAttr "polyTweakUV11.out" "polyMapSewMove10.ip";
+connectAttr "polyMapSewMove10.out" "polyTweakUV12.ip";
+connectAttr "polyTweakUV12.out" "polyMapSewMove11.ip";
+connectAttr "polyMapSewMove11.out" "polyTweakUV13.ip";
+connectAttr "polyTweakUV13.out" "polyMapSewMove12.ip";
+connectAttr "polyMapSewMove12.out" "polyTweakUV14.ip";
+connectAttr "polyTweakUV14.out" "polyMapSewMove13.ip";
+connectAttr "polyMapSewMove13.out" "polyTweakUV15.ip";
+connectAttr "pCubeShape14Orig.w" "transferAttributes1.ip[0].ig";
+connectAttr "pCubeShape14Orig.o" "transferAttributes1.orggeom[0]";
+connectAttr "pCubeShape15.w" "transferAttributes1.src[0]";
+connectAttr "pCubeShape16.w" "transferAttributes1.src[1]";
+connectAttr "pCubeShape13.w" "transferAttributes1.src[2]";
+connectAttr "transferAttributes1.og[0]" "transferAttributes2.ip[0].ig";
+connectAttr "pCubeShape14Orig.o" "transferAttributes2.orggeom[0]";
+connectAttr "pCubeShape15.w" "transferAttributes2.src[0]";
+connectAttr "pCubeShape16.w" "transferAttributes2.src[1]";
+connectAttr "pCubeShape13.w" "transferAttributes2.src[2]";
+connectAttr "transferAttributes2.og[0]" "transferAttributes3.ip[0].ig";
+connectAttr "pCubeShape14Orig.o" "transferAttributes3.orggeom[0]";
+connectAttr "pCubeShape13.w" "transferAttributes3.src[0]";
+connectAttr "transferAttributes3.og[0]" "transferAttributes4.ip[0].ig";
+connectAttr "pCubeShape14Orig.o" "transferAttributes4.orggeom[0]";
+connectAttr "pCubeShape13.w" "transferAttributes4.src[0]";
+connectAttr "pCubeShape16Orig.w" "transferAttributes5.ip[0].ig";
+connectAttr "pCubeShape16Orig.o" "transferAttributes5.orggeom[0]";
+connectAttr "pCubeShape13.w" "transferAttributes5.src[0]";
+connectAttr "pCubeShape15Orig.w" "transferAttributes6.ip[0].ig";
+connectAttr "pCubeShape15Orig.o" "transferAttributes6.orggeom[0]";
+connectAttr "pCubeShape13.w" "transferAttributes6.src[0]";
+connectAttr "polyCube5.out" "polyTweak5.ip";
+connectAttr "polyTweak5.out" "transformGeometry2.ig";
+connectAttr "transformGeometry2.og" "polyAutoProj3.ip";
+connectAttr "pCubeShape22.wm" "polyAutoProj3.mp";
+connectAttr "polyAutoProj3.out" "polyTweakUV16.ip";
+connectAttr "polyTweakUV16.out" "polyMapSewMove14.ip";
+connectAttr "polyMapSewMove14.out" "polyTweakUV17.ip";
+connectAttr "polyTweakUV17.out" "polyMapSewMove15.ip";
+connectAttr "polyMapSewMove15.out" "polyTweakUV18.ip";
+connectAttr "polyTweakUV18.out" "polyMapSewMove16.ip";
+connectAttr "polyMapSewMove16.out" "polyTweakUV19.ip";
+connectAttr "polyTweakUV19.out" "polyMapSewMove17.ip";
+connectAttr "polyMapSewMove17.out" "polyTweakUV20.ip";
+connectAttr "polyTweakUV20.out" "polyMapSewMove18.ip";
+connectAttr "polyMapSewMove18.out" "polyTweakUV21.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape3.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape4.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape5.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape6.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape7.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape8.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape9.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape10.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pCubeShape11.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "pCubeShape12.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape13.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape14.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape15.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape16.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape17.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape18.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape19.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape20.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape21.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape22.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape23.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape3.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape3.iog.og[0]" ":initialShadingGroup.dsm" -na;
+connectAttr "polySurfaceShape3.iog.og[1]" ":initialShadingGroup.dsm" -na;
+connectAttr "groupId6.msg" ":initialShadingGroup.gn" -na;
+connectAttr "groupId7.msg" ":initialShadingGroup.gn" -na;
 // End of Regular Living room.ma
